@@ -37,3 +37,6 @@ formCloseBtn.addEventListener('click', () => searchFormContainer.classList.remov
 window.addEventListener('keyup', event => {
     if(event.key == 'Escape') searchFormContainer.classList.remove('activated');
 });
+
+
+

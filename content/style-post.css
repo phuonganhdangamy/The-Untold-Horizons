@@ -341,6 +341,10 @@ i{
 }
 .post-content{
     padding: 2rem 5rem;
+    text-align: justify;
+}
+.content-notes{
+    font-size: var(--font-size-xsm);
 }
 
 /* Switch caption */

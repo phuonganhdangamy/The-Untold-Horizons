@@ -19,22 +19,22 @@
             <div class="menu" id="menu">
                 <ul class="list">
                     <li class="class-item">
-                        <a href="#" class="list-link current">Home</a>
+                        <a href="#header" class="list-link current">Home</a>
                     </li>
                     <li class="class-item">
-                        <a href="#" class="list-link">Catergories</a>
+                        <a href="#tags" class="list-link">Catergories</a>
                     </li>
                     <li class="class-item">
-                        <a href="all-posts.html" class="list-link">Posts</a>
+                        <a href="#posts" class="list-link">Posts</a>
                     </li>
                     <li class="class-item">
-                        <a href="#" class="list-link">Membership</a>
+                        <a href="#newsletter" class="list-link">Membership</a>
                     </li>
                     <li class="class-item">
-                        <a href="#" class="list-link">Contact</a>
+                        <a href="#contact" class="list-link">Contact</a>
                     </li>
                     <li class="class-item">
-                        <a href="#" class="list-link">About Us</a>
+                        <a href="#about" class="list-link">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -150,7 +150,7 @@
     </section>
 
     <!-- Older posts -->
-    <section class="older-posts section">
+    <section class="older-posts section" id="posts">
 
         <div class="container">
 
@@ -215,21 +215,20 @@
                     </div>
                 </a>
 
-                <a href="#" class="article d-grid">
+                <a href="content/02/eng.html" class="article d-grid">
                     <div class="older-posts-article-image-wrapper">
-                        <img src="images/post/post-03.png" alt="" class="article-image">
+                        <img src="images/post/post-02.png" alt="" class="article-image">
+                        <span class="article-category">Tips & Advice</span>
                     </div>
 
                     <div class="article-data-container">
-
                         <div class="article-data">
-                            <span>23 Dec 2021</span>
+                            <span>May 19th 2024</span>
                             <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
+                            <span>7 min read</span>
                         </div>
-
-                        <h3 class="title article-title">Sample article title</h3>
-                        <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
+                        <h3 class="title article-title">Tips to Stay Productive Before University Entrance Exams</h3>
+                        <p class="article-description">The summer break is here, but it feels quite different for the 2k6 students this year.</p>
 
                     </div>
                 </a>
@@ -283,7 +282,7 @@
     </section>
 
         <!-- Popular tags -->
-    <section class="popular-tags section">
+    <section class="popular-tags section" id="tags">
 
         <div class="container">
 
@@ -293,32 +292,32 @@
 
                 <a href="#" class="article">
                     <span class="tag-name">#University</span>
-                    <img src="/The-Untold-Horizons/images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/post/post-02.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Social</span>
-                    <img src="/The-Untold-Horizons/images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/post/post-02.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Pressure</span>
-                    <img src="/The-Untold-Horizons/images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/post/post-02.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#PoV</span>
-                    <img src="/The-Untold-Horizons/images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/post/post-02.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Tips & Advice</span>
-                    <img src="/The-Untold-Horizons/images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/post/post-02.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Other</span>
-                    <img src="/The-Untold-Horizons/images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/post/post-02.png" alt="" class="article-image">
                 </a>
 
             </div>
@@ -327,7 +326,7 @@
     </section>
 
         <!-- Newsletter -->
-    <section class="newsletter section">
+    <section class="newsletter section" id="newsletter">
 
         <div class="container">
 
@@ -337,10 +336,10 @@
                 <h6 class="title newsletter-title">Subscribe to The Untold Horizons</h6>
                 <p class="newsletter-description">We will send you regular updates of this blog!</p>
 
-                <form action="" class="form">
-                    <input class="form-input" type="text" placeholder="Enter your email address">
+                <form action="" class="form" name="newsletter-list">
+                    <input class="form-input" type="email" name="Email" placeholder="Enter your email address" required>
                     <button class="btn form-btn" type="submit">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
                     </button>
                 </form>
 
@@ -350,23 +349,47 @@
 
     </section>
 
+    <!-- Contact Us -->
+    <section class="contact section" id="contact">
+
+        <div class="container">
+            <h2 class="title section-title" data-name="Contact">Contact Us</h2>
+
+            <div class="form-container-inner">
+                <h6 class="title newsletter-title">Have questions or suggestions to enhance our blog?</h6>
+                <p class="newsletter-description">We would like to hear your opinions!</p>
+
+                <form action="" class="form" name="contact-message">
+                    <input class="form-input" type="email" name="Email" placeholder="Enter your email address">
+                    <input class="form-input" type="text" name="Message" placeholder="Enter your message" required>
+                    <!-- <textarea name="Message" rows="6" placeholder="Your Message">Enter your message</textarea> -->
+                    <button class="btn form-btn" type="submit">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer section">
 
         <div class="footer-container container d-grid">
             
             <div class="company-data">
-                <a href="./index.html">
+                <a href="../index.html">
                     <h2 class="logo">The Untold Horizons</h2>
                 </a>
                 <p class="company-description">Here we go and explore new horizons together.</p>
                 
                 <ul class="list social-media">
                     <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="list-link"><i class="fa-brands fa-square-instagram"></i></a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100080860115721" class="list-link"><i class="fa-brands fa-facebook"></i></a>
                     </li>
                     <li class="list-item">
                         <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
@@ -384,22 +407,22 @@
                 
                 <ul class="footer-list list">
                     <li class="list-item">
-                        <a href="#" class="list-link">Travel</a>
+                        <a href="#" class="list-link">University</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="list-link">Food</a>
+                        <a href="#" class="list-link">Social</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="list-link">Technology</a>
+                        <a href="#" class="list-link">Pressure</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="list-link">Health</a>
+                        <a href="#" class="list-link">PoV</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="list-link">Nature</a>
+                        <a href="#" class="list-link">Tips & Advice</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="list-link">Fitness</a>
+                        <a href="#" class="list-link">Other</a>
                     </li>
                 </ul>
 
@@ -429,7 +452,7 @@
             </div>
 
             <div>
-                <h6 class="title footer-title">Company</h6>
+                <h6 class="title footer-title">Our Blog</h6>
                 
                 <ul class="footer-list list">
                     <li class="list-item">
@@ -438,9 +461,9 @@
                     <li class="list-item">
                         <a href="#" class="list-link">F.A.Q</a>
                     </li>
-                    <li class="list-item">
+                    <!-- <li class="list-item">
                         <a href="#" class="list-link">Careers</a>
-                    </li>
+                    </li> -->
                     <li class="list-item">
                         <a href="#" class="list-link">Authors</a>
                     </li>

@@ -292,32 +292,32 @@
 
                 <a href="#" class="article">
                     <span class="tag-name">#University</span>
-                    <img src="images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/tag/university.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Social</span>
-                    <img src="images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/tag/social.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Pressure</span>
-                    <img src="images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/tag/pressure.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#PoV</span>
-                    <img src="images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/tag/pov.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Tips & Advice</span>
-                    <img src="images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/tag/tips-advice.png" alt="" class="article-image">
                 </a>
 
                 <a href="#" class="article">
                     <span class="tag-name">#Other</span>
-                    <img src="images/post/post-02.png" alt="" class="article-image">
+                    <img src="images/tag/other.png" alt="" class="article-image">
                 </a>
 
             </div>
@@ -342,6 +342,7 @@
                         <i class="fa-regular fa-paper-plane"></i>
                     </button>
                 </form>
+                <span id="msg-newsletter"></span>
 
             </div>
 
@@ -361,13 +362,13 @@
 
                 <form action="" class="form" name="contact-message">
                     <input class="form-input" type="email" name="Email" placeholder="Enter your email address">
-                    <input class="form-input" type="text" name="Message" placeholder="Enter your message" required>
-                    <!-- <textarea name="Message" rows="6" placeholder="Your Message">Enter your message</textarea> -->
+                    <input class="form-input" type="text" name="Message" placeholder="Your message">
+                    
                     <button class="btn form-btn" type="submit">
                         <i class="fa-regular fa-paper-plane"></i>
                     </button>
                 </form>
-
+                <span id="msg-contact"></span>
             </div>
 
         </div>
@@ -480,5 +481,43 @@
 
     <script src="main.js"></script>
     <script src="swiper-bundle.min.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxywF5EyOddUpgggpwPW3jTwvGOetd45_lca_hAup70UAfE5UHtxB7wTXZ6LWxe-V83TA/exec'
+        const form = document.forms['newsletter-list']
+        const msg = document.getElementById("msg-newsletter")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully. Thank you!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+<script>
+    const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzTgF4DrDVbBxidaCyEUg_oWPbbBcST_KVS7Su2yAHnz69H4yKMm5bTHk_MiMSCbNkIfg/exec'
+    const form2 = document.forms['contact-message']
+    const msg2 = document.getElementById("msg-contact")
+  
+    form2.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+        .then(response => {
+            msg2.innerHTML = "Message sent successfully. Thank you!"
+            setTimeout(function(){
+                msg2.innerHTML = ""
+            }, 5000)
+            form2.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>
